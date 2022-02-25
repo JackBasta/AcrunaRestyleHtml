@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Error | Acruna</title>
+		<title>Bank Check | Acruna</title>
 		<meta name="description" content="" />
 		<meta name="format-detection" content="telephone=no" />
 		<link rel="shortcut icon" href="https://f.hubspotusercontent-eu1.net/hubfs/25094951/Acruna_Social_Colour_RGB-1.jpg" />
@@ -57,16 +57,77 @@
 		<main>
 			<article>
 				<div id="portal-page">
+					<div id="show-me-more">
+						<h1>Bank Details</h1>
+						<p>Please enter your company bank details.</p>
+					</div>
 
+					<div id="form-wrapper" class="animateable-block">
 
-					<div id="form-wrapper">
-						<div class="bubble notice-bubble">
+						<form action="" method="post" enctype="multipart/form-data">
+
 							<div class="form-inner">
-								<h1>Error</h1>
-								<p>An error has occurred.</p>
-								<p>Please click the back button and try again</p>
+								<div id="form-stage-1" class="form-stage">
+
+									<div class="form-responses"></div>
+
+									<div class="fields">
+										<div class="field-group">
+											<p>
+												<label for="bank_name">
+													<span class="visibly-hidden">Name of bank *</span>
+													<input type="text" name="bank_name" id="bank_name" required>
+													<span class="label" title="Name of bank *"></span>
+												</label>
+												<span class="error-message" data-error-empty="Bank name cannot be blank" data-invalid="Please enter a valid bank name."></span>
+											</p>
+											<p>
+												<label for="bank_account_name">
+													<span class="visibly-hidden">Name of bank account *</span>
+													<input type="text" name="bank_account_name" id="bank_account_name" required>
+													<span class="label" title="Name of bank account *"></span>
+												</label>
+												<span class="error-message" data-error-empty="Bank account name cannot be blank" data-invalid="Please enter a valid bank account name."></span>
+											</p>
+											<p>
+												<label for="sort_code">
+													<span class="visibly-hidden">Sort code *</span>
+													<input type="text" name="sort_code" id="sort_code" required>
+													<span class="label" title="Sort code *"></span>
+												</label>
+												<span class="error-message" data-error-empty="Sort code cannot be blank" data-invalid="Please enter a valid sort code."></span>
+											</p>
+											<p>
+												<label for="sort_code_confirmation">
+													<span class="visibly-hidden">Re-enter sort code *</span>
+													<input type="text" name="sort_code_confirmation" id="sort_code_confirmation" required>
+													<span class="label" title="Re-enter sort code *"></span>
+												</label>
+												<span class="error-message" data-error-empty="Sort code cannot be blank" data-invalid="Please enter a valid sort code."></span>
+											</p>
+											<p>
+												<label for="account_number">
+													<span class="visibly-hidden">Account number *</span>
+													<input type="text" name="account_number" id="account_number" required>
+													<span class="label" title="Re-enter account number *"></span>
+												</label>
+												<span class="error-message" data-error-empty="Sort code cannot be blank" data-invalid="Please enter a valid sort code."></span>
+											</p>
+											<p>
+												<label for="account_number_confirmation">
+													<span class="visibly-hidden">Re-enter account number *</span>
+													<input type="text" name="account_number_confirmation" id="account_number_confirmation" required>
+													<span class="label" title="Re-enter account number *"></span>
+												</label>
+												<span class="error-message" data-error-empty="Account number cannot be blank" data-invalid="Please enter a valid account number."></span>
+											</p>
+
+											<p class="submit-line"><button class="btn" type="submit">Continue</button></p>
+										</div>
+									</div>
+								</div>
 							</div>
-						</div>
+						</form>
 					</div>
 				</div>
 			</article>

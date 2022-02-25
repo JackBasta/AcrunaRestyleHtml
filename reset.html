@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Error | Acruna</title>
+		<title>Password Reset | Acruna</title>
 		<meta name="description" content="" />
 		<meta name="format-detection" content="telephone=no" />
 		<link rel="shortcut icon" href="https://f.hubspotusercontent-eu1.net/hubfs/25094951/Acruna_Social_Colour_RGB-1.jpg" />
@@ -56,18 +56,50 @@
 		</header>
 		<main>
 			<article>
-				<div id="portal-page">
 
+				<div id="form-wrapper" class="animateable-block">
 
-					<div id="form-wrapper">
-						<div class="bubble notice-bubble">
-							<div class="form-inner">
-								<h1>Error</h1>
-								<p>An error has occurred.</p>
-								<p>Please click the back button and try again</p>
+					<form action="" method="post" enctype="multipart/form-data">
+
+						<div class="form-inner">
+							<div id="form-stage-1" class="form-stage">
+								<h3 class="current-stage"><span class="inner-h2"><span class="highlight-text">Reset your Acruna password</span></h3>
+
+								<div class="form-responses"></div>
+
+								<div class="fields">
+									<p>Enter a new password</p>
+									<div class="field-group">
+										<p>
+											<label for="password">
+												<span class="visibly-hidden">Password *</span>
+												<input type="password" name="password" id="password" required>
+												<span class="label" title="Password *"></span>
+											</label>
+											<span class="error-message" data-error-empty="Password cannot be blank"></span>
+										</p>
+										<div class="form-input-validation-message hs-form-field" id="hs-membership-password-requirements">
+											<ul class="no-list hs-error-msgs">
+												<li>
+													<label class="hs-error-msg">Password must be at least 8 characters long and include lower and uppercase letters, a number, and a symbol</label>
+												</li>
+											</ul>
+										</div>
+										<p>
+											<label for="password">
+												<span class="visibly-hidden">Confirm Password *</span>
+												<input type="password" name="password" id="password" required>
+												<span class="label" title="Confirm Password *"></span>
+											</label>
+											<span class="error-message" data-error-empty="Password cannot be blank"></span>
+										</p>
+
+										<p class="submit-line"><button class="btn" type="submit">Login</button></p>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
+					</form>
 				</div>
 			</article>
 		</main>

@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Error | Acruna</title>
+		<title>Company Search | Acruna</title>
 		<meta name="description" content="" />
 		<meta name="format-detection" content="telephone=no" />
 		<link rel="shortcut icon" href="https://f.hubspotusercontent-eu1.net/hubfs/25094951/Acruna_Social_Colour_RGB-1.jpg" />
@@ -57,16 +57,45 @@
 		<main>
 			<article>
 				<div id="portal-page">
+					<div id="show-me-more">
+						<h1>About you</h1>
+						<p>Tell us a bit about you</p>
+					</div>
 
+					<div id="form-wrapper" class="animateable-block">
 
-					<div id="form-wrapper">
-						<div class="bubble notice-bubble">
+						<form action="" method="post" enctype="multipart/form-data">
+
 							<div class="form-inner">
-								<h1>Error</h1>
-								<p>An error has occurred.</p>
-								<p>Please click the back button and try again</p>
+								<div id="form-stage-1" class="form-stage">
+
+									<div class="form-responses"></div>
+
+									<div class="fields">
+										<div class="field-group">
+											<p>
+												<label for="date_of_birth">
+													<span class="visibly-hidden">Date of birth *</span>
+													<input type="text" name="date_of_birth" id="date_of_birth" required>
+													<span class="label" title="Enter date of birth *"></span>
+												</label>
+												<span class="error-message" data-error-empty="Date of birth cannot be blank" data-invalid="You must be 18 or older to use Acruna."></span>
+											</p>
+											<p>
+												<label for="phone_number">
+													<span class="visibly-hidden">Phone *</span>
+													<input type="text" name="phone_number" id="phone_number" required>
+													<span class="label" title="Enter phone *"></span>
+												</label>
+												<span class="error-message" data-error-empty="Phone cannot be blank" data-invalid="Phone number does not appear to be valid."></span>
+											</p>
+
+											<p class="submit-line"><button class="btn" type="submit">Continue</button></p>
+										</div>
+									</div>
+								</div>
 							</div>
-						</div>
+						</form>
 					</div>
 				</div>
 			</article>
