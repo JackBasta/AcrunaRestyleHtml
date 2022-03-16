@@ -84,7 +84,7 @@
 													<span class="visibly-hidden">Password *</span>
 													<input type="password" name="password" id="password" required>
 													<span class="label" title="Password *"></span>
-													<a class="hs-login-widget-show-password" href="$(this).on('click', function(ev){if($('#password').attr('type')=='password'){$('#password').attr('type','text');$(this).text('Hide password');}else{$('#password').attr('type','password');$(this).text('Show password');}return false;});">Show password</a>
+													<a class="hs-login-widget-show-password" href="#" onClick="(function(){if ($('#Input_Password').attr('type') == 'password') {$('#Input_Password').attr('type', 'text');$(this).text('Hide password');} else {$('#Input_Password').attr('type', 'password'); $(this).text('Show password');}return false;})();return false;">Show password</a>
 												</label>
 												<span class="error-message" data-error-empty="Password cannot be blank"></span>
 											</p>
