@@ -5,157 +5,255 @@ isEnabledForEmailV3Rendering: true
 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
-<!--[if gte mso 9]><xml> <o:OfficeDocumentSettings> <o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch> </o:OfficeDocumentSettings></xml><![endif]-->
-	<head>
-		<title>{% if content.html_title and content.html_title != '' %}{{ content.html_title }}{% else %}{{ content.body.subject }}{% endif %}</title>
-		{% if content.meta_description %}
-		<meta name="description" content="{{ content.meta_description }}"/>
-		{% endif %}
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF+00E9" />
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta name="ProgId" content="Word.Document" />
-		<meta content="telephone=no" name="format-detection" />    
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="color-scheme" content="light dark">
-		<meta name="supported-color-schemes" content="light dark">    
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap" rel="stylesheet">
-		<style type="text/css">
-			* {-webkit-text-size-adjust: none !important; -moz-text-size-adjust:none !important; -ms-text-size-adjust:none !important;box-sizing:border-box;}
-			#outlook a { padding: 0;}
-			@@font-face { font-family: 'MonFont', sans-serif !important; mso-font-alt: 'Arial';     
-			font-style: normal; font-weight: 100; font-display: swap; src: url(https://fonts.gstatic.com/s/montserrat/v21/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2'); unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }    
-			body {width:100%; height:100%; margin:0 auto !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; background-color:#fafafa; margin:0; padding:0; -webkit-font-smoothing:antialiased; font-family: 'MonFont', Arial, Helvetica, sans-serif !important; mso-font-alt: 'Arial'; }
-			h1, h2, h3, p, strong, td, table, span, a {font-family: 'MonFont', Arial, Helvetica, sans-serif !important; mso-font-alt: 'Arial'; }     
-			.MonFont {font-family: 'MonFont', Arial, sans-serif !important; mso-font-alt: 'Arial'; }   
-			.ExternalClass {width: 100%;} body[yahoo] .hideOnMobile {display: none!important;width: 0!important;height: 0!important;max-height: 0!important;line-height: 0!important;opacity: 0!important;overflow: hidden!important;font-size: 0!important;} 
-			body[yahoo] .showOnMobile {display: block!important;width: 100%!important;height: auto!important;max-height: none!important;line-height: 100%!important;opacity: 1!important;overflow: visible!important;font-size: inherit!important;}
-			.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
-			#backgroundTable {margin: 0;padding: 0;width: 100% !important;line-height: 100% !important;}
-			img {outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;} a img {border: none;} a {color: #212121;}
-			hr { height: 1px; background-color: #000001; border: none; }
-			a {color: #4a9cc2;  text-decoration: none;}
-			.whiteLink a, a .whiteLink, .whiteLink {color: #ffffff !important;} 
-			.TextLink a, a .TextLink, .TextLink {color: #a0a0a0 !important;text-decoration: underline !important;} 
-			.FooterLink a, a .FooterLink, .FooterLink {color: #a0a0a0 !important;text-decoration: none !important;}         
-			a[x-apple-data-detectors] {color:inherit!important; text-decoration:none!important; font-size:inherit!important; font-family:inherit!important; font-weight:inherit!important; line-height:inherit!important;}    
-			table td {border-collapse: collapse;}
-			table {border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;}
-			@@media only screen and (max-width: 600px) {
-			.MainLogo {width:100px !important; height:auto !important;}
-			.socIcon {width:40px !important; width:40px !important;} 
-			.headline-normal-override, .text-normal-override {font-weight: normal !important;}
-			body {background-color: #fafafa !important;}
-			a[href^="tel"], a[href^="sms"] {text-decoration: none;pointer-events: none; cursor: default;}
-			.wrapper {width: 100% !important;}
-			.padTen {padding-left: 10px !important; padding-right:10px !important;}
-			.padded {padding-left: 20px !important; padding-right:20px !important;}    
-			.padZero {padding-left: 0px !important; padding-right:0px !important;} 
-			.padbot {padding-bottom: 10px !important;}     
-			.halfwrapper {width: 50% !important;}
-			.center {text-align: center !important;}
-			.mobFont {font-size: 14px !important;}
-			.mobFont2 {font-size: 12px !important;}    
-			.hide {display: none !important; width: 0px !important; height: 0px !important;} }
-			@@media only screen and (max-width: 325px) {.mobFont {font-size: 13px !important;} .mobFont2 {font-size: 11px !important;} } 
-		</style>
-		<style type="text/css">
-			:root { color-scheme: light dark; supported-color-schemes: light dark;}      
-			@@media (prefers-color-scheme: dark ){
-				.dark-img { display:block !important; width: auto !important; overflow: visible !important; float: none !important; max-height:inherit !important; max-width:inherit !important; line-height: auto !important; margin-top:0px !important; visibility:inherit !important; }
-				.light-img { display:none; display:none !important; } 
-				.darkBody {background-color:#000000 !important;} 
-				.darkBGFeature {background-color:#1E1E1E !important;}     
-				.darkbgColor {background-color:#363636 !important;}   
-				.darkText {color: #ffffff !important;}   
-				.wbg {background-color: #ffffff !important;}          
-				.dmImage {filter: brightness(.9) contrast(1.0) !important;}  
-				.dmBB {border-bottom: solid 1px  #ffffff !important; mso-border-bottom-alt: 1px solid #ffffff !important;}
-				h1 {color:#ffffff !important;}
-				h2 {color:#ffffff !important;}
-				h3 {color:#ffffff !important;}
-			}
-			[data-ogsc] .dark-img { display:block !important; width: auto !important; overflow: visible !important; float: none !important; max-height:inherit !important; max-width:inherit !important; line-height: auto !important; margin-top:0px !important; visibility:inherit !important; }
-			[data-ogsc] .light-img { display:none; display:none !important; } 
-			[data-ogsc] h1 {color:#ffffff !important;}
-			[data-ogsc] h2 {color:#ffffff !important;}
-			[data-ogsc] h3 {color:#ffffff !important;}      
-			[data-ogsc] .darkText {color:#ffffff !important;}
-			[data-ogsc] .blackLink {color:#ffffff !important;}
-			[data-ogsc] .darkBody {background-color: #000000 !important;}
-			[data-ogsc] .darkbgColor {background-color:#363636 !important;}
-		</style>
-	</head>
-	<body style="margin: 0 !important; padding: 0 !important;">
-		<div style="display: none; max-height: 0px; overflow: hidden;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-		<table class="wrapper" border="0" cellpadding="0" cellspacing="0" height="100%" width="92%" id="backgroundTable" style=" Margin: 0 !important; table-layout: fixed; padding: 0;"><tr><td class="wrapper" align="center" valign="top"><table width="100%" class="wrapper" cellpadding="0" cellspacing="0" border="0" align="center"><tr><td class="wrapper darkBody" width="100%" bgcolor="#fafafa" style="background-color: #fafafa;" align="center"><center>
-		<!---MainWrapper-->
+<!--[if gte mso 9]><xml> <o:OfficeDocumentSettings> <o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch> </o:OfficeDocumentSettings></xml><![endif]--><head>
+<title>Welcome to Acruna</title>
 
-		<!-- Preview text (text which appears right after subject in certain email clients) -->
-		<table align="center" border="0" cellpadding="0" cellspacing="0" class="wrapper darkBody" width="100%">
-		<tr><td><table align="center"  border="0" cellpadding="0" cellspacing="0" class="wrapper" role="presentation" style="width:600px;table-layout:fixed; mso-line-height-rule: exactly; " width="600">
-		<tr><td  align="left" class="padTen" style="text-align:left; padding-left: 25px; padding-right: 25px; padding-top: 25px;"><table class="wrapper" border="0"  cellpadding="0" cellspacing="0" width="550" style="width:550px;table-layout:fixed; mso-line-height-rule: exactly;" role="presentation"><tr><td align="left" class="darkText" style="font-family: 'Montserrat', Arial, Helvetica, sans-serif !important; mso-line-height-rule: exactly; line-height: 16px; font-size: 12px;  color: #000000; font-weight: normal; vertical-align: top; text-align: center;  padding-right:30px; padding-left: 30px;">{% text "preview_text" label="Preview Text <span class=help-text>This will be used as the preview text that displays in some email clients</span>", value="", no_wrapper=True %}.</td></tr></table></td></tr></table></td></tr></table>
+<meta http-equiv="Content-Type" content="text/html; charsetUTF+00E9">
+<meta http-equiv="Content-Type" content="text/html; charsetutf-8">
+<meta name="ProgId" content="Word.Document">
+<meta content="telephoneno" name="format-detection">
+<meta name="viewport" content="widthdevice-width, initial-scale1.0">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?familyMontserrat:wght@100;400;500;700&amp;displayswap" rel="stylesheet">
+<style type="text/css">
+	* {-webkit-text-size-adjust: none !important; -moz-text-size-adjust:none !important; -ms-text-size-adjust:none !important;box-sizing:border-box;}
+	#outlook a { padding: 0;}
+	@font-face { font-family: 'MonFont', sans-serif !important; mso-font-alt: 'Arial'; 
+	font-style: normal; font-weight: 100; font-display: swap; src: url(https://fonts.gstatic.com/s/montserrat/v21/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2'); unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+	body {width:100%; height:100%; margin:0 auto !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; background-color:#fafafa; margin:0; padding:0; -webkit-font-smoothing:antialiased; font-family: 'MonFont', Arial, Helvetica, sans-serif !important; mso-font-alt: 'Arial'; }
+	h1, h2, h3, p, strong, td, table, span, a {font-family: 'MonFont', Arial, Helvetica, sans-serif !important; mso-font-alt: 'Arial'; } 
+	.MonFont {font-family: 'MonFont', Arial, sans-serif !important; mso-font-alt: 'Arial'; }  
+	.ExternalClass {width: 100%;} body[yahoo] .hideOnMobile {display: none!important;width: 0!important;height: 0!important;max-height: 0!important;line-height: 0!important;opacity: 0!important;overflow: hidden!important;font-size: 0!important;}
+	body[yahoo] .showOnMobile {display: block!important;width: 100%!important;height: auto!important;max-height: none!important;line-height: 100%!important;opacity: 1!important;overflow: visible!important;font-size: inherit!important;}
+	.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+	#backgroundTable {margin: 0;padding: 0;width: 100% !important;line-height: 100% !important;}
+	img {outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;} a img {border: none;} a {color: #212121;}
+	hr { height: 1px; background-color: #000001; border: none; }
+	a {color: #4a9cc2;  text-decoration: none;}
+	.whiteLink a, a .whiteLink, .whiteLink {color: #ffffff !important;}
+	.TextLink a, a .TextLink, .TextLink {color: #a0a0a0 !important;text-decoration: underline !important;}
+	.FooterLink a, a .FooterLink, .FooterLink {color: #a0a0a0 !important;text-decoration: none !important;}     
+	a[x-apple-data-detectors] {color:inherit!important; text-decoration:none!important; font-size:inherit!important; font-family:inherit!important; font-weight:inherit!important; line-height:inherit!important;}
+	table td {border-collapse: collapse;}
+	table {border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;}
+	@media only screen and (max-width: 600px) {
+	.MainLogo {width:100px !important; height:auto !important;}
+	.socIcon {width:40px !important; width:40px !important;}
+	.headline-normal-override, .text-normal-override {font-weight: normal !important;}
+	body {background-color: #fafafa !important;}
+	a[href^="tel"], a[href^="sms"] {text-decoration: none;pointer-events: none; cursor: default;}
+	.wrapper {width: 100% !important;}
+	.padTen {padding-left: 10px !important; padding-right:10px !important;}
+	.padded {padding-left: 20px !important; padding-right:20px !important;}
+	.padZero {padding-left: 0px !important; padding-right:0px !important;}
+	.padbot {padding-bottom: 10px !important;} 
+	.halfwrapper {width: 50% !important;}
+	.center {text-align: center !important;}
+	.mobFont {font-size: 14px !important;}
+	.mobFont2 {font-size: 12px !important;}
+	.hide {display: none !important; width: 0px !important; height: 0px !important;} }
+	@media only screen and (max-width: 325px) {.mobFont {font-size: 13px !important;} .mobFont2 {font-size: 11px !important;} }
+	</style>
+	<style type="text/css">
+	:root { color-scheme: light dark; supported-color-schemes: light dark;}  
+	@media (prefers-color-scheme: dark ){
+	.dark-img { display:block !important; width: auto !important; overflow: visible !important; float: none !important; max-height:inherit !important; max-width:inherit !important; line-height: auto !important; margin-top:0px !important; visibility:inherit !important; }
+	.light-img { display:none; display:none !important; }
+	.darkBody {background-color:#000000 !important;}
+	.darkBGFeature {background-color:#1E1E1E !important;} 
+	.darkbgColor {background-color:#363636 !important;}  
+	.darkText {color: #ffffff !important;}  
+	.wbg {background-color: #ffffff !important;}      
+	.dmImage {filter: brightness(.9) contrast(1.0) !important;} 
+	.dmBB {border-bottom: solid 1px  #ffffff !important; mso-border-bottom-alt: 1px solid #ffffff !important;}
+	h1 {color:#ffffff !important;}
+	h2 {color:#ffffff !important;}
+	h3 {color:#ffffff !important;}
+	}
+	[data-ogsc] .dark-img { display:block !important; width: auto !important; overflow: visible !important; float: none !important; max-height:inherit !important; max-width:inherit !important; line-height: auto !important; margin-top:0px !important; visibility:inherit !important; }
+	[data-ogsc] .light-img { display:none; display:none !important; }
+	[data-ogsc] h1 {color:#ffffff !important;}
+	[data-ogsc] h2 {color:#ffffff !important;}
+	[data-ogsc] h3 {color:#ffffff !important;}  
+	[data-ogsc] .darkText {color:#ffffff !important;}
+	[data-ogsc] .blackLink {color:#ffffff !important;}
+	[data-ogsc] .darkBody {background-color: #000000 !important;}
+	[data-ogsc] .darkbgColor {background-color:#363636 !important;}
+</style>
+<meta name="generator" content="HubSpot">
+<meta property="og:url" content="">
+<meta name="x-apple-disable-message-reformatting">
+<meta name="robots" content="noindex,follow">
+</head>
+<body style="margin: 0 !important; padding: 0 !important;">
+	<div style="display: none; max-height: 0px; overflow: hidden;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+	<table class="wrapper" border="0" cellpadding="0" cellspacing="0" height="100%" width="92%" id="backgroundTable" style=" Margin: 0 !important; table-layout: fixed; padding: 0;">
+		<tbody>
+			<tr>
+				<td class="wrapper" align="center" valign="top">
+					<table width="100%" class="wrapper" cellpadding="0" cellspacing="0" border="0" align="center">
+						<tbody>
+							<tr>
+								<td class="wrapper darkBody" width="100%" bgcolor="#fafafa" style="background-color: #fafafa;" align="center">
+									<center>
 
-		<!-- View as webpage link -->
-		{% if content.create_page %}
-		<!--VAWP Header-->
-		<table align="center" border="0" cellpadding="0" cellspacing="0" class="wrapper darkBody" width="100%">
-		<tr><td><table align="center"  border="0" cellpadding="0" cellspacing="0" class="wrapper" role="presentation" style="width:600px;table-layout:fixed; mso-line-height-rule: exactly; " width="600">
-		<tr><td  align="left" class="padTen" style="text-align:left; padding-left: 25px; padding-right: 25px; padding-top: 25px;"><table class="wrapper" border="0"  cellpadding="0" cellspacing="0" width="550" style="width:550px;table-layout:fixed; mso-line-height-rule: exactly;" role="presentation"><tr><td align="left" class="darkText" style="font-family: 'Montserrat', Arial, Helvetica, sans-serif !important; mso-line-height-rule: exactly; line-height: 16px; font-size: 12px;  color: #000000; font-weight: normal; vertical-align: top; text-align: center;  padding-right:30px; padding-left: 30px;">Not rendering correctly? View this email as a web page <a class="darkText hubspot-mergetag" data-viewaswebpage="true" href="{{ view_as_page_url }}" target="_blank" style="color: #000000; text-decoration: underline;">here</a>.</td></tr></table></td></tr></table></td></tr></table>
-		<!--VAWP Header-->
-		{% endif %}
 
-		<!--Blue Header-->
-		<table align="center" border="0" cellpadding="0" cellspacing="0" class="wrapper darkBody" width="100%"><tr><td><table align="center"  border="0" cellpadding="0" cellspacing="0" class="wrapper" role="presentation" style="width:600px;table-layout:fixed; mso-line-height-rule: exactly; " width="600" role="presentation"><tr><td  align="left" class="padTen" style="text-align:left; padding-left: 25px; padding-right: 25px; padding-top: 25px;"><table class="wrapper" border="0"  cellpadding="0" cellspacing="0" width="550" style="width:550px;table-layout:fixed; mso-line-height-rule: exactly;" role="presentation"><tr><td bgcolor="#0664e8" align="left" class="darkText MonFont" style="font-family: 'Montserrat', Arial, Helvetica, sans-serif !important; mso-line-height-rule: exactly; line-height: 20px; font-size: 16px; font-weight: 600 !important;  color: #FFFFFF; font-weight: normal; vertical-align: top; text-align: left; letter-spacing: 1px; ; -webkit-border-top-left-radius: 25px; -webkit-border-top-right-radius: 25px; -moz-border-radius-topleft: 25px; -moz-border-radius-topright: 25px; border-top-left-radius: 25px; border-top-right-radius: 25px; padding-top:60px; padding-bottom: 30px; padding-right:30px; padding-left: 30px; background: -moz-linear-gradient(-45deg, rgba(6,179,232,1) 0%, rgba(6,78,232,1) 100%);background: -webkit-linear-gradient(-45deg, rgba(6,179,232,1) 0%, rgba(6,78,232,1) 100%); background-color: linear-gradient(-45deg, rgba(6,179,232,1) 0%, rgba(6,78,232,1) 100%); font-weight: normal; overflow: hidden;">Hi {{ personalization_token("contact.firstname", "Business Owner") }},{% module "module_16355256452844" path="/Acruna_Landing_Pages/modules/Personalised Header", label="Personalised Header" %}</td></tr></table></td></tr></table></td></tr></table>
-		<!--Blue Header-->
-                            @RenderBody()
-							<!--Footer-->
-<table align="center" border="0" cellpadding="0" cellspacing="0" class="wrapper darkBody" width="100%" role="presentation">
-<tr><td><table align="center"  border="0" cellpadding="0" cellspacing="0" class="wrapper" role="presentation" style="width:600px;table-layout:fixed; mso-line-height-rule: exactly; " width="600">
-<tr><td  align="left" class="padTen" style="text-align:left; padding-left: 25px; padding-right: 25px; padding-bottom: 25px;">
-<table class="wrapper" border="0"  cellpadding="0" cellspacing="0" width="550" style="width:550px;table-layout:fixed; mso-line-height-rule: exactly;" role="presentation"><tr><td class="darkBGFeature" bgcolor="#062a88" align="left" class="darkText" style="font-family: 'Montserrat', Arial, Helvetica, sans-serif !important; mso-line-height-rule: exactly; line-height: 20px; font-size: 16px; font-weight: 600 !important;  color: #FFFFFF; font-weight: normal; vertical-align: top; text-align: left; letter-spacing: 1px; ; -webkit-border-bottom-right-radius: 25px; -webkit-border-bottom-left-radius: 25px; -moz-border-radius-bottomright: 25px; -moz-border-radius-bottomleft: 25px; border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; padding-top:30px; padding-bottom: 30px; padding-right:30px; padding-left: 30px;">
-<table align="left" width="100%" cellspacing="0" cellpadding="0" border="0" role="presentation"><tr>
-<td align="left"><a href="https://www.acruna.com/" target="_blank"><img class="MainLogo" src="{{ get_asset_url('/Acruna_Landing_Pages/images/Acruna_Logo.png') }}" width="100" height="24" style="display: block; width:100px !important; height:24px !important; "></a></td>
-<td align="right">
-<table align="right" width="84" cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td width="28"><a href="https://www.linkedin.com/company/acruna"  target="_blank"><img src="{{ get_asset_url('/Acruna_Landing_Pages/images/Linkedin.png') }}" width="18" height="18" style="display: block; width:18px; height:18px;"></a></td>
-<td width="28"><a href="https://www.instagram.com/acrunapay"  target="_blank"><img src="{{ get_asset_url('/Acruna_Landing_Pages/images/Instagram.png') }}" width="18" height="18" style="display: block;  width:18px; height:18px;"> </a></td>   
-<td width="28">
-<a href="https://www.facebook.com/Acruna/" target="_blank">
-<img src="{{ get_asset_url('/Acruna_Landing_Pages/images/Facebook.png') }}" width="18" height="18" style="display: block;  width:18px; height:18px;"></a></td>       
-</tr>
-</table>
-</td>
-</tr>
-<tr><td colspan="2" style="padding-top: 20px; line-height: 16px; font-size: 12px; font-weight: 400; color:#ffffff;"><p style="Margin:0px;color:#ffffff;" class="darkText MonFont">{% module "module_16355255176102" path="/Acruna_Landing_Pages/modules/Footer Legals", label="Footer Legals" %}</p></td></tr>
-</table>
-</td></tr></table>
+										<!--MainWrapper-->
+										<!-- Preview text (text which appears right after subject in certain email clients) -->
+										<table align="center" border="0" cellpadding="0" cellspacing="0" class="wrapper darkBody" width="100%">
+											<tbody>
+												<tr>
+													<td>
+														<table align="center" border="0" cellpadding="0" cellspacing="0" class="wrapper" role="presentation" style="width:600px;table-layout:fixed; mso-line-height-rule: exactly; " width="600">
+															<tbody>
+																<tr>
+																	<td align="left" class="padTen" style="text-align:left; padding-left: 25px; padding-right: 25px; padding-top: 25px;">
+																		<table class="wrapper" border="0" cellpadding="0" cellspacing="0" width="550" style="width:550px;table-layout:fixed; mso-line-height-rule: exactly;" role="presentation">
+																			<tbody>
+																				<tr>
+																					<td align="left" class="darkText" style="font-family: 'Montserrat', Arial, Helvetica, sans-serif !important; mso-line-height-rule: exactly; line-height: 16px; font-size: 12px;  color: #000000; font-weight: normal; vertical-align: top; text-align: center;  padding-right:30px; padding-left: 30px;">.</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+										<!-- View as webpage link -->
 
-</td></tr></table></td></tr></table>  
-<!--Footer-->  
+										<!--Blue Header-->
+										<table align="center" border="0" cellpadding="0" cellspacing="0" class="wrapper darkBody" width="100%">
+											<tbody>
+												<tr>
+													<td>
+														<table align="center" border="0" cellpadding="0" cellspacing="0" class="wrapper" role="presentation" style="width:600px;table-layout:fixed; mso-line-height-rule: exactly; " width="600">
+															<tbody>
+																<tr>
+																	<td align="left" class="padTen" style="text-align:left; padding-left: 25px; padding-right: 25px; padding-top: 25px;">
+																		<table class="wrapper" border="0" cellpadding="0" cellspacing="0" width="550" style="width:550px;table-layout:fixed; mso-line-height-rule: exactly;" role="presentation">
+																			<tbody>
+																				<tr>
+																					<td bgcolor="#0664e8" align="left" class="darkText MonFont" style="font-family: 'Montserrat', Arial, Helvetica, sans-serif !important; mso-line-height-rule: exactly; line-height: 20px; font-size: 16px; font-weight: 600 !important;  color: #FFFFFF; font-weight: normal; vertical-align: top; text-align: left; letter-spacing: 1px; ; -webkit-border-top-left-radius: 25px; -webkit-border-top-right-radius: 25px; -moz-border-radius-topleft: 25px; -moz-border-radius-topright: 25px; border-top-left-radius: 25px; border-top-right-radius: 25px; padding-top:60px; padding-bottom: 30px; padding-right:30px; padding-left: 30px; background: -moz-linear-gradient(-45deg, rgba(6,179,232,1) 0%, rgba(6,78,232,1) 100%);background: -webkit-linear-gradient(-45deg, rgba(6,179,232,1) 0%, rgba(6,78,232,1) 100%); background-color: linear-gradient(-45deg, rgba(6,179,232,1) 0%, rgba(6,78,232,1) 100%); font-weight: normal; overflow: hidden;">Hi @Model.ClientName,<div id="hs_cos_wrapper_module_16355256452844" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="color: inherit; font-size: inherit; line-height: inherit;" data-hs-cos-general-type="widget" data-hs-cos-type="module">Let's get you started</div>
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+										<!--Blue Header-->
 
-<!--Disclaimer-->
-<table align="center" border="0" cellpadding="0" cellspacing="0" class="wrapper darkBody" width="100%" role="presentation">
-<tr><td><table align="center"  border="0" cellpadding="0" cellspacing="0" class="wrapper" role="presentation" style="width:600px;table-layout:fixed; mso-line-height-rule: exactly; " width="600" role="presentation">
-<tr><td  align="left" class="padTen" style="text-align:left; padding-left: 25px; padding-right: 25px; padding-bottom: 25px;"><table class="wrapper" border="0"  cellpadding="0" cellspacing="0" width="550" style="width:550px;table-layout:fixed; mso-line-height-rule: exactly;" role="presentation"><tr><td align="left" class="darkText MonFont" style="font-family: 'Montserrat', Arial, Helvetica, sans-serif !important; mso-line-height-rule: exactly; line-height: 16px; font-size: 12px;  color: #a0a0a0; font-weight: normal; vertical-align: top; text-align: center;  padding-right:30px; padding-left: 30px;"><p style="Margin:0px; font-size: 12px;" class="darkText MonFont">
-			{{ site_settings.company_name }}&nbsp;
-			{{ site_settings.company_street_address_1 }}&nbsp;
-			{{ site_settings.company_street_address_2 }}&nbsp;
-			{{ site_settings.company_city }}&nbsp;
-			{{ site_settings.company_state }}&nbsp;
-			{{ site_settings.company_zip }}&nbsp;
-			{{ site_settings.company_country }}&nbsp;
-<br>
-You received this email because you are subscribed to {{ subscription_name }} from {{ site_settings.company_name }}..
-<br>
-Update your <a class="hubspot-mergetag" data-unsubscribe="true" href="{{ unsubscribe_link }}" style="color:#a0a0a0; text-decoration: underline;" data-hs-link-id="0" target="_blank">email preferences</a> to choose the types of emails you receive.
-<br>
-    <a class="hubspot-mergetag TextLink" data-unsubscribe="true" href="{{ unsubscribe_link_all }}" style="color:#a0a0a0; text-decoration: underline;" data-hs-link-id="0" target="_blank">Unsubscribe from all future emails</a></p>
-</td></tr></table></td></tr></table></td></tr></table>
-<!--Disclaimer-->       
+										<div id="hs_cos_wrapper_module_16355266260288" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="color: inherit; font-size: inherit; line-height: inherit;" data-hs-cos-general-type="widget" data-hs-cos-type="module">
 
-<!---MainWrapper-->
-</center></td></tr></table></td></tr></table>   
+
+											@RenderBody()
+
+										</div>
+
+										<!--Footer-->
+										<table align="center" border="0" cellpadding="0" cellspacing="0" class="wrapper darkBody" width="100%" role="presentation">
+											<tbody>
+												<tr>
+													<td>
+														<table align="center" border="0" cellpadding="0" cellspacing="0" class="wrapper" role="presentation" style="width:600px;table-layout:fixed; mso-line-height-rule: exactly; " width="600">
+															<tbody>
+																<tr>
+																	<td align="left" class="padTen" style="text-align:left; padding-left: 25px; padding-right: 25px; padding-bottom: 25px;">
+																		<table class="wrapper" border="0" cellpadding="0" cellspacing="0" width="550" style="width:550px;table-layout:fixed; mso-line-height-rule: exactly;" role="presentation">
+																			<tbody>
+																				<tr>
+																					<td class="darkText" bgcolor="#062a88" align="left" style="font-family: 'Montserrat', Arial, Helvetica, sans-serif !important; mso-line-height-rule: exactly; line-height: 20px; font-size: 16px; font-weight: 600 !important;  color: #FFFFFF; font-weight: normal; vertical-align: top; text-align: left; letter-spacing: 1px; ; -webkit-border-bottom-right-radius: 25px; -webkit-border-bottom-left-radius: 25px; -moz-border-radius-bottomright: 25px; -moz-border-radius-bottomleft: 25px; border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; padding-top:30px; padding-bottom: 30px; padding-right:30px; padding-left: 30px;">
+																						<table align="left" width="100%" cellspacing="0" cellpadding="0" border="0" role="presentation">
+																							<tbody>
+																								<tr>
+																									<td align="left"><a href="https://www.acruna.com/" target="_blank" data-hs-link-id="0"><img class="MainLogo" src="https://www.acruna.com/hs-fs/hubfs/raw_assets/public/Acruna_Landing_Pages/images/Acruna_Logo.png" width="100" height="24" style="display: block; width:100px !important; height:24px !important; " /></a>
+																									</td>
+																									<td align="right">
+																										<table align="right" width="84" cellspacing="0" cellpadding="0" border="0">
+																											<tbody>
+																												<tr>
+																													<td width="28">
+																														<a href="https://www.linkedin.com/company/acruna" target="_blank" data-hs-link-id="0"><img src="https://www.acruna.com/hs-fs/hubfs/raw_assets/public/Acruna_Landing_Pages/images/LinkedIn.png" width="18" height="18" style="display: block; width:18px; height:18px;" /></a>
+																													</td>
+																													<td width="28">
+																														<a href="https://www.instagram.com/acrunapay" target="_blank" data-hs-link-id="0"><img src="https://www.acruna.com/hs-fs/hubfs/raw_assets/public/Acruna_Landing_Pages/images/Instagram.png" width="18" height="18" style="display: block; width:18px; height:18px;" /></a>
+																													</td>
+																													<td width="28">
+																														<a href="https://www.facebook.com/Acruna/" target="_blank" data-hs-link-id="0"><img src="https://www.acruna.com/hs-fs/hubfs/raw_assets/public/Acruna_Landing_Pages/images/Facebook.png" width="18" height="18" style="display: block; width:18px; height:18px;" /></a>
+																													</td>
+																												</tr>
+																											</tbody>
+																										</table>
+																									</td>
+																								</tr>
+																								<tr>
+																									<td colspan="2" style="padding-top: 20px; line-height: 16px; font-size: 12px; font-weight: 400; color:#ffffff;">
+																										<p style="margin-bottom: 1em; Margin:0px;color:#ffffff;" class="darkText MonFont"></p>
+																										<div id="hs_cos_wrapper_module_16355255176102" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="color: inherit; font-size: inherit; line-height: inherit;" data-hs-cos-general-type="widget" data-hs-cos-type="module">&copy; 2022 Acruna Limited</div>
+																										<p style="margin-bottom: 1em; "></p>
+																									</td>
+																								</tr>
+																							</tbody>
+																						</table>
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</td>
+												</tr>
+											</tbody>
+										</table> 
+										<!--Footer--> 
+										<!--Disclaimer-->
+										<table align="center" border="0" cellpadding="0" cellspacing="0" class="wrapper darkBody" width="100%" role="presentation">
+											<tbody>
+												<tr>
+													<td>
+														<table align="center" border="0" cellpadding="0" cellspacing="0" class="wrapper" role="presentation" style="width:600px;table-layout:fixed; mso-line-height-rule: exactly; " width="600">
+															<tbody>
+																<tr>
+																	<td align="left" class="padTen" style="text-align:left; padding-left: 25px; padding-right: 25px; padding-bottom: 25px;">
+																		<table class="wrapper" border="0" cellpadding="0" cellspacing="0" width="550" style="width:550px;table-layout:fixed; mso-line-height-rule: exactly;" role="presentation">
+																			<tbody>
+																				<tr>
+																					<td align="left" class="darkText MonFont" style="font-family: 'Montserrat', Arial, Helvetica, sans-serif !important; mso-line-height-rule: exactly; line-height: 16px; font-size: 12px;  color: #a0a0a0; font-weight: normal; vertical-align: top; text-align: center;  padding-right:30px; padding-left: 30px;"></td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+										<!--Disclaimer-->   
+										<!--MainWrapper-->
+									</center>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
 </body>
+</html>
