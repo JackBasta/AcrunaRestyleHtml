@@ -74,8 +74,11 @@
 											<p>
 												<label for="customer">
 													<span class="visibly-hidden">Customer *</span>
-													<input type="text" name="customer" id="customer" required>
+													<select id="desktop-customer" asp-for="SelectedClientCustomerId" asp-items="Model.ExistingCustomers" class="form-control">
+														<option value="">Select a Customer</option>
+													</select>
 													<span class="label" title="Customer *"></span>
+													<input type="hidden" asp-for="ClientCustomerId" />
 												</label>
 												<span class="error-message" data-error-empty="Customer cannot be blank" data-invalid="Please select a valid customer."></span>
 											</p>
@@ -111,8 +114,19 @@
 												</label>
 												<span class="error-message" data-error-empty="Payment terms cannot be blank" data-invalid="Please enter valid payment terms."></span>
 											</p>
-
-											<!-- your upload widget here -->
+											<p id="drop-area">
+												<label class="standard-text">
+													<input asp-for="DesktopFileUpload" type="file" />
+													<label class="button" for="DesktopFileUpload">Click or Drag Invoice here</label>
+												</label>
+												<br />
+											</p>
+											<div class="mt-4">
+												<div class="login-btn-wrapper center">
+													<p> <progress id="progress-bar" max=100 value=0></progress></p>
+													<button type="submit" id="upload-desktop-btn" name="upload-desktop-btn" class="btn acruna-btn d-none">Save</button>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
