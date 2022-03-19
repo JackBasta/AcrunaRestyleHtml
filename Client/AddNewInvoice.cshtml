@@ -77,11 +77,11 @@
                                 <span class="error-message" data-error-empty="Payment terms cannot be blank" data-invalid="Please enter valid payment terms." asp-validation-for="PaymentTermsInDays"></span>
                             </p>
                             <div class="uploader" id="uploader" data-error-text="Please upload at least one invoice to continue. Ensure your invoice is one of the following formats: .doc, docx, .pdf, .odt, .xls, .xlsx, .jpg, .ods, .txt">
-                                <div class="uploader-inner">
-                                    <label for="invoice" for="DesktopFileUpload">
-                                        <span class="other-content" id="drop-area">
+                                <div class="uploader-inner" id="drop-area">
+                                    <label for="invoice" asp-for="DesktopFileUpload">
+                                        <span class="other-content">
                                             <span class="label-text">Drag your invoice here or <span class="label-underlined">click to upload</span></span><span class="upload-later">.</span>
-                                            <input asp-for="DesktopFileUpload" type="file" name="invoice" id="invoice" multiple="">
+                                            <input asp-for="DesktopFileUpload" type="file">
                                         </span>
                                     </label>
                                 </div>

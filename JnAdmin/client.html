@@ -64,14 +64,14 @@
 					<div id="page-header-block">
 						<h1>Client - BRICKS LEICESTER CAPITAL LIMITED</h1>
 						<ul class="nav nav-pills flex-column">
-							<li class="nav-item"><a class="nav-link active" id="details" href="#">Details</a></li>
-							<li class="nav-item"><a class="nav-link" id="history" href="#">Application History</a></li>
-							<li class="nav-item"><a class="nav-link" id="customers" href="#">Customers</a></li>
-							<li class="nav-item"><a class="nav-link" id="invoices" href="#">Invoices</a></li>
+							<li class="nav-item"><a class="nav-link active" id="detailslnk" href="#" onclick="showtab('details')">Details</a></li>
+							<li class="nav-item"><a class="nav-link" id="historylnk" href="#" onclick="showtab('apphistory')">Application History</a></li>
+							<li class="nav-item"><a class="nav-link" id="customerslnk" href="#" onclick="showtab('customers')">Customers</a></li>
+							<li class="nav-item"><a class="nav-link" id="invoiceslnk" href="#" onclick="showtab('invoices')">Invoices</a></li>
 						</ul>
 					</div>
 
-					<div class="inner-portal-page">
+					<div class="inner-portal-page" id="detailsDiv">
 
 						<div class="columns-3">
 							<div class="column company-data-block">
@@ -147,7 +147,7 @@
 					</div>
 
 
-					<div class="inner-portal-page">
+					<div class="inner-portal-page" id="apphistoryDiv" style="display:none;">
 						<div class="single-column">
 							<h2 class="funky-text">Client application history</h2>
 							<div class="inner-list" data-cols="3" role="table">
@@ -283,7 +283,7 @@
 					</div>
 
 
-					<div class="inner-portal-page">
+					<div class="inner-portal-page" id="customersDiv" style="display:none;">
 						<div class="single-column">
 							<h2 class="funky-text">Customers</h2>
 							<div class="inner-list" data-cols="4" role="table">
@@ -328,7 +328,7 @@
 					</div>
 
 
-					<div class="inner-portal-page">
+					<div class="inner-portal-page" id="invoicesDiv" style="display:none;">
 						<div class="single-column">
 							<h2 class="funky-text">Invoices</h2>
 							<div class="inner-list" data-cols="6" role="table">
@@ -445,5 +445,16 @@
 			</div>
 		</template>
 		<script src="https://static.hsappstatic.net/jquery-libs/static-1.4/jquery/jquery-1.11.2.js"></script>
+		<script type="text/javascript">
+			function showtab(tab) {
+				$(".nav-link").removeClass("active");
+				switch (tab) {
+					case "details": $("#detailsDiv").show(); $("#apphistoryDiv").hide(); $("#customersDiv").hide(); $("#invoicesDiv").hide(); $("#detailslnk").addClass("active"); break;
+					case "apphistory": $("#detailsDiv").hide(); $("#apphistoryDiv").show(); $("#customersDiv").hide(); $("#invoicesDiv").hide(); $("#historylnk").addClass("active"); break;
+					case "customers": $("#detailsDiv").hide(); $("#apphistoryDiv").hide(); $("#customersDiv").show(); $("#invoicesDiv").hide(); $("#customerslnk").addClass("active"); break;
+					case "invoices": $("#detailsDiv").hide(); $("#apphistoryDiv").hide(); $("#customersDiv").hide(); $("#invoicesDiv").show(); $("#invoiceslnk").addClass("active"); break;
+				}
+			}
+		</script>
 	</body>
 </html>
