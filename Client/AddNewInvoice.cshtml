@@ -76,18 +76,20 @@
                                 </label>
                                 <span class="error-message" data-error-empty="Payment terms cannot be blank" data-invalid="Please enter valid payment terms." asp-validation-for="PaymentTermsInDays"></span>
                             </p>
-
-                            <p id="drop-area">
-                                <label class="standard-text">
-                                    <input asp-for="DesktopFileUpload" type="file" />
-                                    <label class="button" for="DesktopFileUpload">Click or Drag Invoice here <progress id="progress-bar" max=100 value=0></progress></label>
-                                </label>
-
-                            </p>
+                            <div class="uploader" id="uploader" data-error-text="Please upload at least one invoice to continue. Ensure your invoice is one of the following formats: .doc, docx, .pdf, .odt, .xls, .xlsx, .jpg, .ods, .txt">
+                                <div class="uploader-inner">
+                                    <label for="invoice" for="DesktopFileUpload">
+                                        <span class="other-content" id="drop-area">
+                                            <span class="label-text">Drag your invoice here or <span class="label-underlined">click to upload</span></span><span class="upload-later">.</span>
+                                            <input asp-for="DesktopFileUpload" type="file" name="invoice" id="invoice" multiple="">
+                                        </span>
+                                    </label>
+                                </div>
+                                <progress id="progress-bar" max=100 value=0></progress>
+                            </div>
 
                             <div class="mt-4">
                                 <div class="login-btn-wrapper center">
-
                                     <button type="submit" id="upload-desktop-btn" name="upload-desktop-btn" class="btn acruna-btn d-none">Save</button>
                                 </div>
                             </div>
