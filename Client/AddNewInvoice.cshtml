@@ -66,13 +66,15 @@
                                 <span class="error-message" data-error-empty="Payment terms cannot be blank" data-invalid="Please enter valid payment terms." asp-validation-for="PaymentTermsInDays"></span>
                             </p>
 
-                            <p id="drop-area">
-                                <label class="standard-text">
-                                    <input asp-for="DesktopFileUpload" type="file" />
-                                    <label class="button" for="DesktopFileUpload">Click or Drag Invoice here </label>
-                                    <progress id="progress-bar" max=100 value=0></progress>
-                                </label>
-                            </p>
+							<p id="drop-area">
+								<label class="standard-text">
+									<input type="file" id="DesktopFileUpload" name="DesktopFileUpload">
+									<label class="button" for="DesktopFileUpload" style="text-align: center;">
+										<span class="upload-label">Click or Drag Invoice here</span>
+									</label>
+									<progress id="progress-bar" max="100" value="0" style="display: block;margin: 0 auto;"></progress>
+								</label>
+							</p>
 
                             <div class="mt-4">
                                 <div class="login-btn-wrapper center">
@@ -144,7 +146,7 @@
             var dt = e.dataTransfer;
             var files = dt.files;
             fileInput.files = files;
-            $('#drop-area .button').text(files.length + " File Selected");
+            $('#drop-area .upload-label').text(files.length + " File Selected");
             progressBar.value = 100;
         }
     </script>
