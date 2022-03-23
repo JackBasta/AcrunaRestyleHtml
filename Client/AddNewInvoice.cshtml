@@ -20,51 +20,56 @@
         <form method="post" enctype="multipart/form-data" class="bubble-container">
             <div class="form-inner">
                 <div id="form-stage-1" class="form-stage">
-                    <p>Please fill in the invoice information and upload a copy of the invoice using the file upload field below.<br /><strong>Note: Invoices must not be older than 21 days from date of issue</strong>.</p>
-                    <div class="form-responses" asp-validation-summary="All"></div>
-                    <div class="fields">
-                        <div class="field-group">
-                            <p>
-                                <label asp-for="SelectedClientCustomerId" class="forSelect">
-                                    <select id="desktop-customer" asp-for="SelectedClientCustomerId" asp-items="Model.ExistingCustomers" class="form-control">
-                                        <option value="">Select a Customer</option>
-                                    </select>
-                                    <input type="hidden" asp-for="ClientCustomerId" />
-                                </label>
-                                <span class="error-message" data-error-empty="Customer cannot be blank" data-invalid="Please select a valid customer." asp-validation-for="ClientCustomerId"></span>
-                            </p>
-                            <p>
-                                <label asp-for="InvoiceNumber">
-                                    <span class="visibly-hidden">Invoice number *</span>
-                                    <input asp-for="InvoiceNumber" placeholder="" aria-label="Invoice Number" class="form-control" required="true" />
-                                    <span class="label" title="Invoice number * Exactly as it is on the invoice"></span>
-                                </label>
-                                <span class="error-message" data-error-empty="Invoice number cannot be blank" data-invalid="Please enter a valid invoice number." asp-validation-for="InvoiceNumber"></span>
-                            </p>
-                            <p>
-                                <label asp-for="IssueDate">
-                                    <span class="visibly-hidden">Issue date *</span>
-                                    <input asp-for="IssueDate" class="form-control" aria-label="Issue Date" required="true" />
-                                    <span class="label" title="Issue date *"></span>
-                                </label>
-                                <span class="error-message" data-error-empty="Issue date cannot be blank" data-invalid="Please enter a valid issue date." asp-validation-for="IssueDate"></span>
-                            </p>
-                            <p>
-                                <label asp-for="InvoiceAmount">
-                                    <span class="visibly-hidden">Amount *</span>
-                                    <input asp-for="InvoiceAmount" placeholder="" aria-label="Gross Amount" class="form-control" required="true" />
-                                    <span class="label" title="Amount * Gross Amount (inc any VAT)"></span>
-                                </label>
-                                <span class="error-message" data-error-empty="Amount cannot be blank" data-invalid="Please enter a valid amount." asp-validation-for="InvoiceAmount"></span>
-                            </p>
-                            <p>
-                                <label asp-for="PaymentTermsInDays">
-                                    <span class="visibly-hidden">Payment terms *</span>
-                                    <input asp-for="PaymentTermsInDays" placeholder="" aria-label="Payment Terms" class="form-control" required="true" />
-                                    <span class="label" title="Payment terms * In Days (e.g. 30)"></span>
-                                </label>
-                                <span class="error-message" data-error-empty="Payment terms cannot be blank" data-invalid="Please enter valid payment terms." asp-validation-for="PaymentTermsInDays"></span>
-                            </p>
+                    
+					<p>
+						Please fill in the invoice information and upload a copy of the invoice using the file upload field below.<br />
+						<strong>Note: Invoices must not be older than 21 days from date of issue.</strong>
+					</p>
+					<div class="form-responses" asp-validation-summary="All"></div>
+					<div class="fields">
+						<div class="field-group">
+							<p>
+								<label asp-for="SelectedClientCustomerId">
+									<span class="visibly-hidden">Customer *</span>
+									<select id="desktop-customer" asp-for="SelectedClientCustomerId" asp-items="Model.ExistingCustomers" class="form-control">
+										<option value="">Select a Customer</option>
+									</select>
+									<span class="label" title="Customer *"></span>
+									<input type="hidden" asp-for="ClientCustomerId" />
+								</label>
+								<span class="error-message" data-error-empty="Customer cannot be blank" data-invalid="Please select a valid customer." asp-validation-for="ClientCustomerId"></span>
+							</p>
+							<p>
+								<label asp-for="InvoiceNumber">
+									<span class="visibly-hidden">Invoice number (as stated on the invoice)</span>
+									<input asp-for="InvoiceNumber" placeholder="" aria-label="Invoice Number" class="form-control" required="true" />
+									<span class="label" title="Invoice number (as stated on the invoice)"></span>
+								</label>
+								<span class="error-message" data-error-empty="Invoice number cannot be blank" data-invalid="Please enter a valid invoice number." asp-validation-for="InvoiceNumber"></span>
+							</p>
+							<p>
+								<label asp-for="IssueDate">
+									<span class="visibly-hidden">Issue date *</span>
+									<input asp-for="IssueDate" class="form-control" aria-label="Issue Date" required="true" />
+									<span class="label" title="Issue date *"></span>
+								</label>
+								<span class="error-message" data-error-empty="Issue date cannot be blank" data-invalid="Please enter a valid issue date." asp-validation-for="IssueDate"></span>
+							</p>
+							<p>
+								<label asp-for="InvoiceAmount">
+									<span class="visibly-hidden">Gross Amount (inc any VAT)</span>
+									<input asp-for="InvoiceAmount" placeholder="" aria-label="Gross Amount" class="form-control" required="true" />
+									<span class="label" title="Gross Amount (inc any VAT)"></span>
+								</label>
+								<span class="error-message" data-error-empty="Amount cannot be blank" data-invalid="Please enter a valid amount." asp-validation-for="InvoiceAmount"></span>
+							</p>
+							<p>
+								<label asp-for="PaymentTermsInDays">
+									<span class="visibly-hidden">Payment terms *</span>
+									<input asp-for="PaymentTermsInDays" placeholder="" aria-label="Payment Terms" class="form-control" required="true" />
+									<span class="label" title="Payment terms (in days e.g. 30)"></span>
+								</label>
+							</p>
 
 							<p id="drop-area">
 								<label class="standard-text">
@@ -76,17 +81,17 @@
 								</label>
 							</p>
 
-                            <div class="mt-4">
-                                <div class="login-btn-wrapper center">
-                                    <button type="submit" id="upload-desktop-btn" name="upload-desktop-btn" class="btn acruna-btn d-none">Save</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
+							<div class="mt-4">
+								<div class="login-btn-wrapper center">
+									<button type="submit" id="upload-desktop-btn" name="upload-desktop-btn" class="btn acruna-btn d-none">Save</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
 </div>
 
 @section scripts{
