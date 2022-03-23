@@ -63,7 +63,7 @@
 				<div id="portal-page">
 					<div id="page-header-block">
 						<h1>Client - BRICKS LEICESTER CAPITAL LIMITED</h1>
-						<ul class="nav nav-pills flex-column">
+						<ul class="nav nav-pills flex-column wide-nav-pills">
 							<li class="nav-item"><a class="nav-link active" id="detailslnk" href="#" onclick="showtab('details')">Details</a></li>
 							<li class="nav-item"><a class="nav-link" id="historylnk" href="#" onclick="showtab('apphistory')">Application History</a></li>
 							<li class="nav-item"><a class="nav-link" id="customerslnk" href="#" onclick="showtab('customers')">Customers</a></li>
@@ -332,54 +332,51 @@
 					<div class="inner-portal-page" id="invoicesDiv" style="display:none;">
 						<div class="single-column">
 							<h2 class="funky-text">Invoices</h2>
-							<div class="inner-list" data-cols="6" role="table">
-								<div class="inner-row-header">
-									<div class="inner-row" role="row">
-										<div class="inner-col" role="columnheader">
-											Date Submitted
-										</div>
-										<div class="inner-col" role="columnheader">
-											Invoice Number
-										</div>
-										<div class="inner-col" role="columnheader">
-											Customer Name
-										</div>
-										<div class="inner-col" role="columnheader">
-											Total Value
-										</div>
-										<div class="inner-col" role="columnheader">
-											Invoice
-										</div>
-										<div class="inner-col" role="columnheader">
-											Status
-										</div>
+							<div class="row inner-list" id="tableContainer" role="table" data-cols="7">
+								<div role="rowgroup" class="inner-row-header">
+									<div role="row" class="inner-row">
+										<div role="columnheader" class="inner-col">Date Submitted</div>
+										<div role="columnheader" class="inner-col">Client</div>
+										<div role="columnheader" class="inner-col">Invoice Number</div>
+										<div role="columnheader" class="inner-col">Customer</div>
+										<div role="columnheader" class="inner-col">Amount</div>
+										<div role="columnheader" class="inner-col">Status</div>
+										<div role="columnheader" class="inner-col" tooltip="">File</div>
 									</div>
-								</div>
-								<div class="inner-row-data">
-									<div class="inner-row-set" role="row">
+								</div> 
+								<div role="rowgroup" class="inner-row-data" data-bind="foreach: GridItems">
+									<div role="row" class="inner-row-set">
 										<div class="col row-1" role="cell">
 											<div class="label label-1">Date Submitted</div>
-											<div class="data data-1">?</div>
+											<div class="data data-1" data-bind="dateString:CreatedDate">17/02/2022</div>
 										</div>
 										<div class="col row-2" role="cell">
-											<div class="label label-2">Invoice Number</div>
-											<div class="data data-2">?</div>
+											<div class="label label-2">Client</div>
+											<div class="data data-2" data-bind="text:ClientName">ALLPLAY ENTERTAINMENT LTD</div>
 										</div>
 										<div class="col row-3" role="cell">
-											<div class="label label-3">Customer Name</div>
-											<div class="data data-3">?</div>
+											<div class="label label-3">Invoice Number</div>
+											<div class="data data-3" data-bind="text:InvoiceNumber">
+												<a id="btnNav" class="btnNav view-btn btn btn-default" data-bind="attr: { 'data-keyValue' : InvoiceSubmissionId, 'href': '/JnAdmin/InvoiceSubmission?id=' +  InvoiceSubmissionId() }, visible: true" data-keyvalue="8" href="/JnAdmin/InvoiceSubmission?id=8">Inv001</a>
+											</div>
 										</div>
 										<div class="col row-4" role="cell">
-											<div class="label label-4">Total Value</div>
-											<div class="data data-4">?</div>
+											<div class="label label-4">Customer</div>
+											<div class="data data-4" data-bind="text:CustomerName">POD HOMES (STAFFS) LTD</div>
 										</div>
 										<div class="col row-5" role="cell">
-											<div class="label label-5">Invoice</div>
-											<div class="data data-5">?</div>
+											<div class="label label-5">Amount</div>
+											<div class="data data-5" data-bind="text:InvoiceAmount">£3,000.00</div>
 										</div>
 										<div class="col row-6" role="cell">
 											<div class="label label-6">Status</div>
-											<div class="data data-6">?</div>
+											<div class="data data-6" data-bind="text:InvoiceSubmissionStatus">Transaction Complete</div>
+										</div>
+										<div class="col row-7" role="cell">
+											<div class="label label-7"></div>
+											<div class="data data-action">
+												<a id="btnInvoice" class="btnInvoice fa fa-lg fa-file-pdf-o " data-bind="attr: { 'data-keyValue' : InvoiceSubmissionId, 'href': '/Shared/Invoice?id=' +  InvoiceSubmissionId() }, visible: true" data-keyvalue="8" href="/Shared/Invoice?id=8"></a>
+											</div>
 										</div>
 									</div>
 								</div>
