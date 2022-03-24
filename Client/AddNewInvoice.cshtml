@@ -13,7 +13,7 @@
 </style>
 <div id="portal-page">
     <div id="page-header-block">
-        <h1>Submit an invoice</h1>
+        <h1>Submit an invoice for MyStream</h1>
         <p>Please submit your client invoice details below.</p>
     </div>
     <div id="form-wrapper" class="animateable-block">
@@ -32,7 +32,7 @@
 								<label asp-for="SelectedClientCustomerId">
 									<span class="visibly-hidden">Customer *</span>
 									<select id="desktop-customer" asp-for="SelectedClientCustomerId" asp-items="Model.ExistingCustomers" class="form-control">
-										<option value="">Select a Customer</option>
+										<option value="">Select a MyStream Customer</option>
 									</select>
 									<span class="label" title="Customer *"></span>
 									<input type="hidden" asp-for="ClientCustomerId" />
