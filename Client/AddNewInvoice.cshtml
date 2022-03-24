@@ -29,6 +29,15 @@
 					<div class="fields">
 						<div class="field-group">
 							<p>
+								<label class="forSelect" for="SelectedClientCustomerId">
+									<select id="desktop-customer" class="form-control" data-val="true" data-val-required="The SelectedClientCustomerId field is required." name="SelectedClientCustomerId">
+										<option value="">Select a MyStream Customer</option>
+										<option value="17">MYSTREAM LIMITED</option>
+										<option value="21">RELIANCE COURIERS LIMITED</option>
+									</select>
+									<input type="hidden" data-val="true" data-val-required="The ClientCustomerId field is required." id="ClientCustomerId" name="ClientCustomerId" value="0">
+								</label>
+
 								<label asp-for="SelectedClientCustomerId">
 									<span class="visibly-hidden">Customer *</span>
 									<select id="desktop-customer" asp-for="SelectedClientCustomerId" asp-items="Model.ExistingCustomers" class="form-control">
