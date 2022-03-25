@@ -120,7 +120,7 @@
 												</label>
 												<span class="error-message validation-message field-validation-valid" data-valmsg-for="CustomerContactEmail" data-valmsg-replace="true"></span>
 											</p>
-											<p>
+											<p class="optional-field">
 												<label for="CustomerContactFirstname">
 													<span class="visibly-hidden">Their first name</span>
 													<input class="form-control" aria-label="CustomerContactFirstname" placeholder=" " type="text" id="CustomerContactFirstname" name="CustomerContactFirstname" value="" />
@@ -128,7 +128,7 @@
 												</label>
 												<span class="error-message validation-message field-validation-valid" data-valmsg-for="CustomerContactFirstname" data-valmsg-replace="true"></span>
 											</p>
-											<p>
+											<p class="optional-field">
 												<label for="CustomerContactLastname">
 													<span class="visibly-hidden">Their last name </span>
 													<input class="form-control" aria-label="CustomerContactLastname" placeholder=" " type="text" id="CustomerContactLastname" name="CustomerContactLastname" value="" />
@@ -205,5 +205,6 @@
 			</div>
 		</template>
 		<script src="https://static.hsappstatic.net/jquery-libs/static-1.4/jquery/jquery-1.11.2.js"></script>
+		<script>$(document).ready(function(){$('.optional-field input').on('keyup', function(){$(this).closest('.optional-field')[(this.value.length ? 'add' : 'remove')+'Class']('populated');});});</script>
 	</body>
 </html>
