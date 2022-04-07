@@ -206,7 +206,7 @@
                             <input type="hidden" id="hiddenGridSelections">
                             <div class="row form-inline search-form" style="padding-bottom:5px">
                                 <div class="col-md-3 col-sm-4 col-xs-5 search-control-Freetext">
-                                    <input type="text" name="Search" id="schSearch" placeholder="Search by Name" class="gridfilter form-control" data-bind="valueUpdate: 'input', executeOnEnter: FilterPage">
+                                    <input type="text" name="Note" id="schNote" placeholder="Add a note" class="gridfilter form-control" data-bind="valueUpdate: 'input', executeOnEnter: FilterPage" />
                                 </div>
                                 <div class="col-md-3 col-sm-4 col-xs-5 search-control-Selectable">
                                     <select name="StatusFilter" id="schStatusFilter" class="gridfilter form-control" placeholder="Filter by">
@@ -217,7 +217,7 @@
                                     </select>
                                 </div>
                                 <div class="col-md-2 col-sm-3">
-                                    <button class="btn btn-primary" id="btnFilter" data-bind="click: FilterPage, enable: !IsBusy()"><span class="glyphicon glyphicon-search"></span> Search</button>
+                                    <button class="btn btn-primary" id="btnFilter" data-bind="click: FilterPage, enable: !IsBusy()"><span class="glyphicon glyphicon-search"></span> Add note</button>
                                 </div>
                                 <div class="pager-group col-md-3 input-group col-md-offset-1">
                                     <span class="input-group-text"><a href="#" class="gridnavback" data-bind="click: PreviousPage, visible: GridPreferences.PageNumber() > 1" style="display: none;"><i class="fa fa-backward"></i></a></span>
